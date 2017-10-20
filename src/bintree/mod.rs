@@ -74,6 +74,7 @@ where T: std::fmt::Display + std::cmp::Ord + Clone{
 
 impl<T> BinNode<T>
 where T: std::fmt::Display + std::cmp::Ord + Clone {
+
     fn new() -> BinNode<T> {
         BinNode {
             value: None,
