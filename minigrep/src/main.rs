@@ -16,12 +16,12 @@ fn main() {
 //        }
 //    };
     let config = Config::new(&args).unwrap_or_else(|err| {
-        println!("Error parsing arguments: {}", err);
+        eprintln!("Error parsing arguments: {}", err);
         process::exit(1);
     });
 
     if let Err(e) = minigrep::run(config) {
-        println!("FATAL: {}", e);
+        eprintln!("FATAL: {}", e);
         process::exit(1);
     }
 }
